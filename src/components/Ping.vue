@@ -1,11 +1,15 @@
 <template>
   <div>
-    <p>{{msg}}</p>
+    <div class="container">
+      <button type="button" class="btn btn-primary">{{msg}}</button>
+    </div>
+    <p>My extra message is {{msg}}</p>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+
 
 export default {
   name: 'Ping',
