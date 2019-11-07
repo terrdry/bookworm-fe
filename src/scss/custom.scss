@@ -1,0 +1,26 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// Your variable overrides
+$body-bg: #2ca6db;
+$body-color: $red;
+$modal-content-bg: $teal;
+
+
+
+$theme-colors: (
+  "primary": #910a8a,
+  "secondary":  $gray-600,
+  "success":  $green,
+  "info":  $yellow,
+  "warning":  $orange,
+  "danger":  $red,
+  "light":  $gray-200,
+  "dark":  $gray-800
+);
+
+// Bootstrap and its default variables
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// BootstrapVue stuff
+@import '../../node_modules/bootstrap-vue/src/index.scss';

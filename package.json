@@ -12,6 +12,8 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.19",
     "core-js": "^2.6.5",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
@@ -27,9 +29,7 @@
   },
   "eslintConfig": {
     "root": true,
-    "rules": {
-      "no-console": "off"
-    },
+    "rules": {},
     "env": {
       "node": true
     },
@@ -37,7 +37,6 @@
       "plugin:vue/essential",
       "@vue/airbnb"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
     }
