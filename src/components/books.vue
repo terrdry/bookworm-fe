@@ -42,6 +42,7 @@
     <b-modal ref="addBookModal"
              id="book-modal"
              title="Add a new book"
+             book_id=""
              hide-footer>
       <b-form @submit="onSubmit" @reset="onReset" class="w-100">
         <b-form-group id="form-title-group"
@@ -122,6 +123,7 @@ export default {
     return {
       books: [],
       addBookForm: {
+        book_id: '',
         title: '',
         author: '',
         read: [],
@@ -132,7 +134,7 @@ export default {
 
       showMessage: false,
       editForm: {
-        id: '',
+        book_id: '',
         title: '',
         author: '',
         read: [],
@@ -171,10 +173,11 @@ export default {
         });
     },
     initForm() {
+      this.addBookForm.book_id = 'NEW';
       this.addBookForm.title = '';
       this.addBookForm.author = '';
       this.addBookForm.read = [];
-      this.editForm.id = '';
+      this.editForm.book_id = '';
       this.editForm.title = '';
       this.editForm.author = '';
       this.editForm.read = [];
@@ -185,6 +188,8 @@ export default {
       let read = false;
       if (this.addBookForm.read[0]) read = true;
       const payload = {
+        book_id: "NEW",
+        //book_id: this.AddBookForm.book_id,
         title: this.addBookForm.title,
         author: this.addBookForm.author,
         read, // property shorthand
@@ -206,6 +211,7 @@ export default {
       let read = false;
       if (this.editForm.read[0]) read = true;
       const payload = {
+        book_id: this.editForm.book_id,
         title: this.editForm.title,
         author: this.editForm.author,
         read,
